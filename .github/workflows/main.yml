@@ -1,17 +1,16 @@
 name: vprofile actions
 on: workflow_dispatch
-
 env:
   AWS_REGION: us-east-1
   ECR_REPOSITORY: vprofile-gitops
-  EKS_CLUSTER: vprofile-eks
+  # EKS_CLUSTER: vprofile-eks
 
 
 jobs:
   Testing:
     runs-on: ubuntu-latest
     steps:
-      - name: Code  Checkout
+      - name: Code checkout
         uses: actions/checkout@v4
       
       - name: Maven test
